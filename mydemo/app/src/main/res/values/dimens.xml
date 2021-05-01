@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margn5dp">5dp</dimen>
+    <dimen name="margn10dp">10dp</dimen>
+    <dimen name="margn15dp">15dp</dimen>
+</resources>

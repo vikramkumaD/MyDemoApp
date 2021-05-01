@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.AppBarLayout
+
+                android:paddingTop="@dimen/margn5dp"
+                android:paddingBottom="@dimen/margn5dp"
+                android:id="@+id/appBarLayout"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsingToolbarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentScrim="#FFFFFF"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <RelativeLayout
+                            android:id="@+id/relative_storeheader"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/img_back"
+                                android:paddingLeft="5dp"
+                                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"></ImageView>
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:id="@+id/tv_storetitle"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:layout_centerHorizontal="true"
+                                android:text="Res. Name"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"></TextView>
+
+
+                            <View
+                                android:layout_marginTop="10dp"
+                                android:layout_below="@+id/tv_storetitle"
+                                android:background="#DCDCDC"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"></View>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative_storediscount"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/relative_storeheader"
+                            android:background="@color/discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/tv_storediscount"
+                                android:layout_centerHorizontal="true"
+                                android:text="Flat 30% of on complete order"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"></TextView>
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_couponlist"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/relative_storediscount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <View
+                            android:layout_marginTop="@dimen/margn5dp"
+                            android:layout_below="@+id/rv_couponlist"
+                            android:background="#DCDCDC"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"></View>
+
+
+                    </RelativeLayout>
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       android:layout_centerVertical="true"
+                       android:paddingTop="@dimen/margn5dp"
+                       android:paddingBottom="@dimen/margn5dp"
+                       android:paddingLeft="@dimen/margn15dp"
+                       android:paddingRight="@dimen/margn15dp"
+                       android:textStyle="bold"
+                       android:id="@+id/tv_cateroryname"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/veg"
+                       android:textColor="@color/black"></TextView>
+
+                   <LinearLayout
+
+                       android:layout_alignParentRight="true"
+                       android:paddingRight="@dimen/margn15dp"
+                       android:layout_marginTop="@dimen/margn10dp"
+                       android:id="@+id/constantlinearlayout"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="end"
+                       android:orientation="horizontal"
+                       >
+
+
+                       <TextView
+                           android:paddingTop="@dimen/margn5dp"
+                           android:paddingBottom="@dimen/margn5dp"
+                           android:paddingLeft="@dimen/margn15dp"
+                           android:paddingRight="@dimen/margn15dp"
+                           android:id="@+id/tv_veg"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/dialogwith_blackborder"
+                           android:text="@string/veg"
+                           android:textColor="@color/black"></TextView>
+
+                       <TextView
+                           android:paddingTop="@dimen/margn5dp"
+                           android:paddingBottom="@dimen/margn5dp"
+                           android:paddingLeft="@dimen/margn15dp"
+                           android:paddingRight="@dimen/margn15dp"
+                           android:layout_marginLeft="@dimen/margn10dp"
+                           android:id="@+id/tv_egg"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/dialogwith_blackborder"
+                           android:text="@string/egg"
+                           android:textColor="@color/black"></TextView>
+
+                       <ImageView
+                           android:id="@+id/searchview"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="@dimen/margn15dp"
+                           android:src="@drawable/ic_baseline_search_24"
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"></ImageView>
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_toRightOf="@+id/tv_cateroryname"
+                       android:layout_alignParentRight="true"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+
+                       <androidx.appcompat.widget.SearchView
+                           android:visibility="gone"
+                           android:layout_weight="1"
+                           app:queryHint="search for food"
+                           android:id="@+id/cat_searchview"
+                           android:layout_marginLeft="@dimen/margn10dp"
+                           android:layout_marginRight="@dimen/margn10dp"
+
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+
+                       </androidx.appcompat.widget.SearchView>
+
+                       <ImageView
+                           android:visibility="gone"
+                           android:layout_marginRight="@dimen/margn10dp"
+                           android:layout_gravity="center_vertical"
+                           android:layout_weight="0"
+                           android:layout_toRightOf="@+id/cat_searchview"
+                           android:id="@+id/img_clearseaerch"
+                           android:src="@drawable/ic_baseline_cancel_24"
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"></ImageView>
+
+
+                   </LinearLayout>
+
+
+               </RelativeLayout>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                    android:id="@+id/rv_catergory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</RelativeLayout>
